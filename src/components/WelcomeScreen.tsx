@@ -1,7 +1,9 @@
+
 import { Button } from "@/components/ui/button";
 import { useOnboarding } from "@/context/OnboardingContext";
 import SuccessStory from "./SuccessStory";
 import { Check } from "lucide-react";
+import HowItWorksInfographic from "./HowItWorksInfographic";
 
 const WelcomeScreen = () => {
   const { setCurrentStep, userProfile } = useOnboarding();
@@ -67,14 +69,7 @@ const WelcomeScreen = () => {
             <h2 className="text-2xl font-bold mb-4 text-foreground">
               How it works
             </h2>
-            <p className="text-muted-foreground mb-2">
-              We've partnered with employers to help you find job opportunities
-              that fit your skills and career goals.
-            </p>
-            <p className="text-muted-foreground">
-              As part of this program, you'll have access to a network of
-              employers who want to hire you and potentially cover your tuition.
-            </p>
+            <HowItWorksInfographic />
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-foreground">
