@@ -44,6 +44,38 @@ const PasswordSetupForm = () => {
       </header>
 
       <main className="flex-1 container mx-auto py-8 px-4">
+        <Card className="max-w-2xl mx-auto border shadow-sm mb-6">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-2xl text-foreground">Your Account Information</CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Please review your information below
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-secondary/50 p-4 rounded-md">
+                <p className="text-sm text-muted-foreground mb-1">Full Name</p>
+                <p className="text-foreground">{userProfile.firstName} {userProfile.lastName}</p>
+              </div>
+              <div className="bg-secondary/50 p-4 rounded-md">
+                <p className="text-sm text-muted-foreground mb-1">Program</p>
+                <p className="text-foreground">{userProfile.program}</p>
+              </div>
+              <div className="bg-secondary/50 p-4 rounded-md">
+                <p className="text-sm text-muted-foreground mb-1">Expected Graduation</p>
+                <p className="text-foreground">{new Date(userProfile.graduationDate).toLocaleDateString()}</p>
+              </div>
+              <div className="bg-secondary/50 p-4 rounded-md">
+                <p className="text-sm text-muted-foreground mb-1">Contact</p>
+                <p className="text-foreground">{userProfile.email}</p>
+              </div>
+            </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              If this information is incorrect please contact support@tidewater.edu
+            </p>
+          </CardContent>
+        </Card>
+        
         <Card className="max-w-2xl mx-auto border shadow-sm">
           <CardHeader className="pb-4">
             <CardTitle className="text-2xl text-foreground">Set Your Password</CardTitle>

@@ -50,14 +50,6 @@ const WelcomeScreen = () => {
               timeBeforeGraduation="3 months"
             />
           </div>
-
-          <Button 
-            onClick={() => setCurrentStep('password')}
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-white"
-          >
-            Complete Your Profile
-          </Button>
         </div>
 
         {/* Right Column */}
@@ -90,13 +82,21 @@ const WelcomeScreen = () => {
               As part of your career services at Tidewater, you need to complete your profile 
               to connect with employers looking for talented students like you.
             </p>
-            <div className="bg-background border-l-4 border-primary p-4">
+            <div className="bg-background border-l-4 border-primary p-4 mb-6">
               <p className="text-foreground italic">
                 "Completing your profile will take less than 5 minutes and can lead to early career 
                 opportunities and potential tuition support."
               </p>
               <p className="text-primary mt-2 font-medium">Dr. Patricia Wilson, Career Services</p>
             </div>
+            
+            <Button 
+              onClick={() => setCurrentStep('password')}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white w-full md:w-auto"
+            >
+              Complete Your Profile
+            </Button>
           </div>
         </div>
       </div>
