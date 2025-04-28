@@ -1,6 +1,11 @@
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { useOnboarding } from "@/context/OnboardingContext";
 import Logo from "./Logo";
 
@@ -9,7 +14,7 @@ const ProfileForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setCurrentStep('location');
+    setCurrentStep("location");
   };
 
   return (
@@ -27,34 +32,45 @@ const ProfileForm = () => {
               Hi, {userProfile.firstName}! Welcome to Tidewater Talent Bridge
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              As part of your onboarding, please confirm your profile information below
+              As part of your onboarding, please confirm your profile
+              information below
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="firstName" className="block text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-foreground"
+                  >
                     First Name
                   </label>
                   <input
                     id="firstName"
                     type="text"
                     value={userProfile.firstName}
-                    onChange={(e) => updateUserProfile({ firstName: e.target.value })}
+                    onChange={(e) =>
+                      updateUserProfile({ firstName: e.target.value })
+                    }
                     className="w-full p-3 bg-background border border-input rounded-md text-foreground"
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="lastName" className="block text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-foreground"
+                  >
                     Last Name
                   </label>
                   <input
                     id="lastName"
                     type="text"
                     value={userProfile.lastName}
-                    onChange={(e) => updateUserProfile({ lastName: e.target.value })}
+                    onChange={(e) =>
+                      updateUserProfile({ lastName: e.target.value })
+                    }
                     className="w-full p-3 bg-background border border-input rounded-md text-foreground"
                     required
                   />
@@ -62,7 +78,10 @@ const ProfileForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-foreground"
+                >
                   Email
                 </label>
                 <input
@@ -76,7 +95,10 @@ const ProfileForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-foreground"
+                >
                   Phone Number
                 </label>
                 <input
@@ -90,14 +112,19 @@ const ProfileForm = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="program" className="block text-sm font-medium text-foreground">
+                <label
+                  htmlFor="program"
+                  className="block text-sm font-medium text-foreground"
+                >
                   Program
                 </label>
                 <input
                   id="program"
                   type="text"
                   value={userProfile.program}
-                  onChange={(e) => updateUserProfile({ program: e.target.value })}
+                  onChange={(e) =>
+                    updateUserProfile({ program: e.target.value })
+                  }
                   className="w-full p-3 bg-background border border-input rounded-md text-foreground bg-muted"
                   disabled
                   title="Program cannot be changed. Contact administration for changes."
@@ -106,28 +133,38 @@ const ProfileForm = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="startDate" className="block text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="startDate"
+                    className="block text-sm font-medium text-foreground"
+                  >
                     Start Date
                   </label>
                   <input
                     id="startDate"
                     type="date"
                     value={userProfile.startDate}
-                    onChange={(e) => updateUserProfile({ startDate: e.target.value })}
+                    onChange={(e) =>
+                      updateUserProfile({ startDate: e.target.value })
+                    }
                     className="w-full p-3 bg-background border border-input rounded-md text-foreground bg-muted"
                     disabled
                     title="Start date cannot be changed. Contact administration for changes."
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="graduationDate" className="block text-sm font-medium text-foreground">
+                  <label
+                    htmlFor="graduationDate"
+                    className="block text-sm font-medium text-foreground"
+                  >
                     Expected Graduation
                   </label>
                   <input
                     id="graduationDate"
                     type="date"
                     value={userProfile.graduationDate}
-                    onChange={(e) => updateUserProfile({ graduationDate: e.target.value })}
+                    onChange={(e) =>
+                      updateUserProfile({ graduationDate: e.target.value })
+                    }
                     className="w-full p-3 bg-background border border-input rounded-md text-foreground bg-muted"
                     disabled
                     title="Graduation date cannot be changed. Contact administration for changes."
@@ -136,7 +173,7 @@ const ProfileForm = () => {
               </div>
 
               <div className="pt-4">
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
                 >
