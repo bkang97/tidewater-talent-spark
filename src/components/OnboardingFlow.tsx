@@ -30,7 +30,7 @@ const OnboardingFlow = () => {
     }
   };
 
-  return <>{renderStep()}</>;
+  return <div className="bg-background">{renderStep()}</div>;
 };
 
 export default OnboardingFlow;
