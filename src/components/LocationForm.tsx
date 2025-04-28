@@ -14,25 +14,25 @@ const LocationForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-charcoal-900 flex flex-col">
-      <header className="w-full bg-charcoal-800 p-4">
+    <div className="min-h-screen bg-background flex flex-col">
+      <header className="w-full bg-secondary p-4">
         <div className="container mx-auto">
           <Logo className="text-2xl" />
         </div>
       </header>
 
       <main className="flex-1 container mx-auto py-8 px-4">
-        <Card className="max-w-2xl mx-auto bg-charcoal-800 border-0 shadow-lg">
+        <Card className="max-w-2xl mx-auto border shadow-sm">
           <CardHeader className="pb-4">
-            <CardTitle className="text-2xl text-white">Location Preferences</CardTitle>
-            <CardDescription className="text-gray-300">
+            <CardTitle className="text-2xl text-foreground">Location Preferences</CardTitle>
+            <CardDescription className="text-muted-foreground">
               Let employers know about your location preferences for potential opportunities
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
-                <label htmlFor="location" className="block text-sm font-medium text-gray-200">
+                <label htmlFor="location" className="block text-sm font-medium text-foreground">
                   Current Location
                 </label>
                 <input
@@ -40,18 +40,18 @@ const LocationForm = () => {
                   type="text"
                   value={userProfile.location}
                   onChange={(e) => updateUserProfile({ location: e.target.value })}
-                  className="w-full p-3 bg-charcoal-700 border border-charcoal-600 rounded-md text-white"
+                  className="w-full p-3 bg-background border border-input rounded-md text-foreground"
                   required
                   placeholder="City, State"
                 />
               </div>
 
-              <div className="flex items-center justify-between py-2 border-t border-charcoal-700">
+              <div className="flex items-center justify-between py-2 border-t border-border">
                 <div className="space-y-0.5">
-                  <label htmlFor="relocate" className="text-sm font-medium text-gray-200">
+                  <label htmlFor="relocate" className="text-sm font-medium text-foreground">
                     Willing to Relocate
                   </label>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-muted-foreground">
                     Are you open to opportunities that require relocation?
                   </p>
                 </div>
@@ -65,7 +65,7 @@ const LocationForm = () => {
               <div className="pt-4">
                 <Button 
                   type="submit"
-                  className="w-full bg-tidewater-500 hover:bg-tidewater-600 text-white font-medium py-3"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
                 >
                   Save and Continue
                 </Button>
