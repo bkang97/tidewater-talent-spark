@@ -13,7 +13,7 @@ export type UserProfile = {
   willingToRelocate: boolean;
 };
 
-export type OnboardingStep = 'welcome' | 'profile' | 'location' | 'progress' | 'complete';
+export type OnboardingStep = 'welcome' | 'password' | 'profile' | 'location' | 'progress' | 'complete';
 
 interface OnboardingContextType {
   userProfile: UserProfile;

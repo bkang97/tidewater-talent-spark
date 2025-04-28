@@ -2,6 +2,7 @@
 import { useOnboarding } from "@/context/OnboardingContext";
 import CompletionScreen from "./CompletionScreen";
 import LocationForm from "./LocationForm";
+import PasswordSetupForm from "./PasswordSetupForm";
 import ProfileForm from "./ProfileForm";
 import ProgressScreen from "./ProgressScreen";
 import WelcomeScreen from "./WelcomeScreen";
@@ -14,6 +15,8 @@ const OnboardingFlow = () => {
     switch (currentStep) {
       case 'welcome':
         return <WelcomeScreen />;
+      case 'password':
+        return <PasswordSetupForm />;
       case 'profile':
         return <ProfileForm />;
       case 'location':

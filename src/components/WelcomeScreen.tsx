@@ -13,12 +13,11 @@ const WelcomeScreen = () => {
         {/* Left Column */}
         <div className="p-6 md:p-12 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">
-            Welcome to the <span className="text-tidewater-500">Tidewater Talent Bridge</span>
+            Welcome to <span className="text-tidewater-500">Tidewater Talent Bridge</span>
           </h1>
           <p className="text-xl text-gray-300 mb-6">
-            Tidewater has partnered with employers to connect you as early as possible with job opportunities. 
-            Our goal is for you to graduate with a job lined up, with the potential to have your 
-            tuition covered.
+            Hello {userProfile.firstName}, we've already set up part of your account as part of 
+            Tidewater's April 2025 cohort. We just need to ask a few more things to get you started.
           </p>
           
           <div className="space-y-4 mb-8">
@@ -53,7 +52,7 @@ const WelcomeScreen = () => {
           </div>
 
           <Button 
-            onClick={() => setCurrentStep('profile')}
+            onClick={() => setCurrentStep('password')}
             size="lg"
             className="bg-tidewater-500 hover:bg-tidewater-600 text-white"
           >
@@ -64,7 +63,7 @@ const WelcomeScreen = () => {
         {/* Right Column */}
         <div className="bg-charcoal-800 p-6 md:p-12 flex flex-col justify-center">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 text-white">What We Know About You</h2>
+            <h2 className="text-2xl font-bold mb-6 text-white">Your Account Information</h2>
             <div className="space-y-3">
               <div className="bg-charcoal-700 p-4 rounded-md">
                 <p className="text-sm text-gray-400 mb-1">Full Name</p>
