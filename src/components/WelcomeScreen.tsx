@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useOnboarding } from "@/context/OnboardingContext";
 import SuccessStory from "./SuccessStory";
@@ -73,7 +72,7 @@ const WelcomeScreen = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4 text-foreground">
-              Next Steps
+              Get Started
             </h2>
             <p className="text-muted-foreground mb-4">
               As part of onboarding, please complete your profile to connect
